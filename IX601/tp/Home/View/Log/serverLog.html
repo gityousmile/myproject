@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/guanlicenter_zcsy.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/myFont.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/sweetalert.css">
+    <link href="__PUBLIC__/Home/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__PUBLIC__/Home//css/paging.css" />
+
+    <script src="__PUBLIC__/Home/jquery.min.js"></script>
+    <script src="__PUBLIC__/Home/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/My97DatePicker/WdatePicker.js"></script>
+    <script src="__PUBLIC__/Home/js/redefinedAlert.js"></script><!-- 重定义alert样式  -->
+    <script src="__PUBLIC__/Home/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/zepto.js?2"></script>
+    <script src="__PUBLIC__/Home/js/jquery.cookie.js"></script>
+    <script src="__PUBLIC__/Home/js/jquerysession.js"></script>
+    <style type="text/css">
+        .diy_select_btn span {
+            font-size: 0px;
+            color: #787878;
+            width: 18px;
+            height: 20px;
+            display: inline-block;
+            border-left: solid 1px #d7d7d7;
+            text-align: center;
+            vertical-align: top;
+            line-height: 20px;
+            background: url("__PUBLIC__/Home/images/down.png") no-repeat center center
+        }
+    </style>
+    <script type="text/javascript">
+       function queryloglist(){
+         $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlogs = eval('(' +data+ ')');
+            var newArr = [];
+            for(var i =0;i<playlogs.length;i++){
+              if(newArr.indexOf(playlogs[i]['device_name']) == -1){
+                  newArr.push(playlogs[i]['device_name']);
+              }
+            }
+            $("#deviceCount").html(newArr.length+"台");
+            $("#playTimes").html(playlogs.length+"次");
+            if(playlogs.length <= 0){
+              $("#exportExcel").hide();
+            };
+            var playlog;
+            var sortType = sessionStorage['sortType'];
+            if(sortType == "idU"){
+              function sortById(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["id"]-playlogs[j]["id"]>=0){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortById(playlogs);
+            }else if(sortType == "idD"){
+              function sortById(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["id"]-playlogs[j]["id"]<=0){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortById(playlogs);
+            }else if(sortType == "deviceU"){
+              function sortByDevice(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["deviceid"]>playlogs[j]["deviceid"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByDevice(playlogs);
+            }else if(sortType == "deviceD"){
+              function sortByDevice(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["deviceid"]<playlogs[j]["deviceid"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByDevice(playlogs);
+            }else if(sortType == "videoU"){
+                function sortByVideoName(playlogs,empty){
+                  if(!String.prototype.localeCompare)
+                    return null;
+
+                  var letters ="abcdefghjklmnopqrstwxyz".split('');
+                  var EN ="ABCDEFGHJKLMNOPQRSTWXYZ".split('');
+                  var zh ="啊把差大额发噶哈级卡啦吗那哦爬器然啥他哇西呀咋".split('');
+
+                  var curr = [];
+                  for(i=0;i<letters.length;i++){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["file_name"]) <= 0) && playlogs[j]["file_name"].localeCompare(zh[i+1]) == -1) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["file_name"]) <= 0) && playlogs[j]["file_name"].localeCompare(EN[i+1]) == -1)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                  return curr;
+              } 
+              playlog = sortByVideoName(playlogs);
+            }else if(sortType == "videoD"){
+              function sortByVideoName(playlogs,empty){
+                if(!String.prototype.localeCompare)
+                    return null;
+
+                  var letters ="abcdefghjklmnopqrstwxyz".split('');
+                  var EN ="ABCDEFGHJKLMNOPQRSTWXYZ".split('');
+                  var zh ="啊把差大额发噶哈级卡啦吗那哦爬器然啥他哇西呀咋".split('');
+
+                  var curr = [];
+                  
+                  for(i=letters.length;i>=0;i--){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["file_name"]) >= 0) && playlogs[j]["file_name"].localeCompare(zh[i-1]) >= 0) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["file_name"]) >= 0) && playlogs[j]["file_name"].localeCompare(EN[i-1]) >= 0)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                  return curr;
+              } 
+              playlog = sortByVideoName(playlogs);
+            }else if(sortType == "startU"){
+              function sortByPlayStart(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["play_start"]>playlogs[j]["play_start"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByPlayStart(playlogs);
+            }else if(sortType == "endU"){
+              function sortByPlayEnd(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["play_end"]>playlogs[j]["play_end"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByPlayEnd(playlogs);
+            }else if(sortType == "endD"){
+              function sortByPlayEnd(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["play_end"]<playlogs[j]["play_end"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByPlayEnd(playlogs);
+            }else{
+              function sortByPlayStart(playlogs){
+                for(var i=0;i<playlogs.length;i++){
+                  for(var j=i;j<playlogs.length;j++){
+                    if(playlogs[i]["play_start"]<playlogs[j]["play_start"]){
+                       var temp = playlogs[i];
+                       playlogs[i] = playlogs[j];
+                       playlogs[j] = temp;
+                    }
+                  }           
+                }     
+                return playlogs;
+              } 
+              playlog = sortByPlayStart(playlogs);
+            }
+            for(var o in playlog){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortById(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "idU" && sortType != "idD"){
+            sessionStorage.setItem('sortType','idU');
+          }else{
+            if(sortType == "idU"){
+              sessionStorage.setItem('sortType','idD');
+            }else{
+              sessionStorage.setItem('sortType','idU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlog = eval('(' +data+ ')');
+            function sortById(playlog){
+              var sortType = sessionStorage['sortType'];
+              if(sortType == "idU"){
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["id"]-playlog[j]["id"]>=0){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }     
+              }else{
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["id"]-playlog[j]["id"]<=0){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }
+              }
+              return playlog;
+            }  
+            for(var o in sortById(playlog)){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");
+              }
+            }
+          });
+       }
+
+       function sortByDevice(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "deviceU" && sortType != "deviceD"){
+            sessionStorage.setItem('sortType','deviceU');
+          }else{
+            if(sortType == "deviceU"){
+              sessionStorage.setItem('sortType','deviceD');
+            }else{
+              sessionStorage.setItem('sortType','deviceU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlog = eval('(' +data+ ')');
+            function sortByDevice(playlog){
+              var sortType = sessionStorage['sortType'];
+              if(sortType == "deviceU"){
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["deviceid"]>playlog[j]["deviceid"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }     
+              }else{
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["deviceid"]<playlog[j]["deviceid"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }
+              }
+              return playlog;
+            }  
+            for(var o in sortByDevice(playlog)){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortByVideoName(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "videoU" && sortType != "videoD"){
+            sessionStorage.setItem('sortType','videoU');
+          }else{
+            if(sortType == "videoU"){
+              sessionStorage.setItem('sortType','videoD');
+            }else{
+              sessionStorage.setItem('sortType','videoU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlogs = eval('(' +data+ ')');
+            var sortType = sessionStorage['sortType'];
+            function sortByVideoName(playlogs,empty){
+              if(!String.prototype.localeCompare)
+                  return null;
+
+                var letters ="abcdefghjklmnopqrstwxyz".split('');
+                var EN ="ABCDEFGHJKLMNOPQRSTWXYZ".split('');
+                var zh ="啊把差大额发噶哈级卡啦吗那哦爬器然啥他哇西呀咋".split('');
+
+                var curr = [];
+                if(sortType == "videoU"){
+                  for(i=0;i<letters.length;i++){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["file_name"]) <= 0) && playlogs[j]["file_name"].localeCompare(zh[i+1]) == -1) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["file_name"]) <= 0) && playlogs[j]["file_name"].localeCompare(EN[i+1]) == -1)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                }else{
+                  for(i=letters.length;i>=0;i--){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["file_name"]) >= 0) && playlogs[j]["file_name"].localeCompare(zh[i-1]) >= 0) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["file_name"]) >= 0) && playlogs[j]["file_name"].localeCompare(EN[i-1]) >= 0)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                }
+                return curr;
+            }  
+            var playlog = sortByVideoName(playlogs);
+            console.log(playlog);
+            for(var o in playlog){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortByDeviceGroup(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "groupnameU" && sortType != "groupnameD"){
+            sessionStorage.setItem('sortType','groupnameU');
+          }else{
+            if(sortType == "groupnameU"){
+              sessionStorage.setItem('sortType','groupnameD');
+            }else{
+              sessionStorage.setItem('sortType','groupnameU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlogs = eval('(' +data+ ')');
+            var sortType = sessionStorage['sortType'];
+            function sortByVideoName(playlogs,empty){
+              if(!String.prototype.localeCompare)
+                  return null;
+
+                var letters ="abcdefghjklmnopqrstwxyz".split('');
+                var EN ="ABCDEFGHJKLMNOPQRSTWXYZ".split('');
+                var zh ="啊把差大额发噶哈级卡啦吗那哦爬器然啥他哇西呀咋".split('');
+
+                var curr = [];
+                if(sortType == "groupnameU"){
+                  for(i=0;i<letters.length;i++){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["group_name"]) <= 0) && playlogs[j]["group_name"].localeCompare(zh[i+1]) == -1) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["group_name"]) <= 0) && playlogs[j]["group_name"].localeCompare(EN[i+1]) == -1)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                }else{
+                  for(i=letters.length;i>=0;i--){
+                    for(j=0;j<playlogs.length;j++){
+                      if(((!zh[i] || zh[i].localeCompare(playlogs[j]["group_name"]) >= 0) && playlogs[j]["group_name"].localeCompare(zh[i-1]) >= 0) || ((!EN[i] || EN[i].localeCompare(playlogs[j]["group_name"]) >= 0) && playlogs[j]["group_name"].localeCompare(EN[i-1]) >= 0)) {
+                        curr.push(playlogs[j]);
+                      }
+                    }
+                  }
+                }
+                return curr;
+            }  
+            var playlog = sortByVideoName(playlogs);
+            console.log(playlog);
+            for(var o in playlog){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortByPlayStart(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "startU" && sortType != "startD"){
+            sessionStorage.setItem('sortType','startU');
+          }else{
+            if(sortType == "startU"){
+              sessionStorage.setItem('sortType','startD');
+            }else{
+              sessionStorage.setItem('sortType','startU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlog = eval('(' +data+ ')');
+            var sortType = sessionStorage['sortType'];
+            function sortByPlayStart(playlog){
+              if(sortType == "startU"){
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["play_start"]>playlog[j]["play_start"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }     
+              }else{
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["play_start"]<playlog[j]["play_start"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }
+              }
+              return playlog;
+            }  
+            for(var o in sortByPlayStart(playlog)){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortByPlayEnd(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "endU" && sortType != "endD"){
+            sessionStorage.setItem('sortType','endU');
+          }else{
+            if(sortType == "endU"){
+              sessionStorage.setItem('sortType','endD');
+            }else{
+              sessionStorage.setItem('sortType','endU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlog = eval('(' +data+ ')');
+            var sortType = sessionStorage['sortType'];
+            function sortByPlayStart(playlog){
+              if(sortType == "endU"){
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["play_end"]>playlog[j]["play_end"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }     
+              }else{
+                for(var i=0;i<playlog.length;i++){
+                  for(var j=i;j<playlog.length;j++){
+                    if(playlog[i]["play_end"]<playlog[j]["play_end"]){
+                       var temp = playlog[i];
+                       playlog[i] = playlog[j];
+                       playlog[j] = temp;
+                    }
+                  }           
+                }
+              }
+              return playlog;
+            }  
+            for(var o in sortByPlayStart(playlog)){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function sortByDeviceName(){
+          var sortType = sessionStorage['sortType'];
+          if(sortType != "devicenameU" && sortType != "devicenameD"){
+            sessionStorage.setItem('sortType','devicenameU');
+          }else{
+            if(sortType == "devicenameU"){
+              sessionStorage.setItem('sortType','devicenameD');
+            }else{
+              sessionStorage.setItem('sortType','devicenameU');
+            }
+          }
+          $("#mobileTab tbody tr").remove();
+          $.get("{:U('Log/serverlogdata')}",{},function(data){
+            //将json数据转化为数组
+            var playlogs = eval('(' +data+ ')');
+            var sortType = sessionStorage['sortType'];
+            function sortByDeviceName(playlogs,empty){
+              if(!String.prototype.localeCompare)
+                  return null;
+
+                var letters ="abcdefghjklmnopqrstwxyz".split('');
+                var zh ="啊把差大额发噶哈级卡啦吗那哦爬器然啥他哇西呀咋".split('');
+
+                var curr = [];
+                if(sortType == "devicenameU"){
+                  for(i=0;i<letters.length;i++){
+                    for(j=0;j<playlogs.length;j++){
+                      if(/.*[\u4e00-\u9fa5]+.*$/.test(playlogs[j]["device_name"].substring(0,1))){ 
+                        if((!zh[i] || zh[i].localeCompare(playlogs[j]["device_name"]) <= 0) && playlogs[j]["device_name"].localeCompare(zh[i+1]) == -1){
+                          curr.push(playlogs[j]);
+                        }  
+                      }else{
+                        if((!letters[i] || letters[i].localeCompare(playlogs[j]["device_name"]) <= 0) && playlogs[j]["device_name"].localeCompare(letters[i+1]) == -1){
+                          curr.push(playlogs[j]);
+                        }
+                      }
+                    }
+                  }
+                }else{
+                  for(i=letters.length;i>=0;i--){
+                    for(j=0;j<playlogs.length;j++){
+                      if(/.*[\u4e00-\u9fa5]+.*$/.test(playlogs[j]["device_name"].substring(0,1))){ 
+                        if((!zh[i] || zh[i].localeCompare(playlogs[j]["device_name"]) >= 0) && playlogs[j]["device_name"].localeCompare(zh[i-1]) >= 0){
+                          curr.push(playlogs[j]);
+                        }  
+                      }else{
+                        if((!letters[i] || letters[i].localeCompare(playlogs[j]["device_name"]) >= 0) && playlogs[j]["device_name"].localeCompare(letters[i-1]) >= 0){
+                          curr.push(playlogs[j]);
+                        }
+                      }
+                    }
+                  }
+                }
+                return curr;
+            }  
+            var playlog = sortByDeviceName(playlogs);
+            for(var o in playlog){
+              var curpage = <?php echo $curpage = empty($_GET['page']) ? 1 : $_GET['page'];?>;
+              if(o>=(curpage-1)*10&&o<curpage*10){
+                  $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+              }
+            }
+          });
+       }
+
+       function search(){
+          var down_date_start = $("#down_date_start").val();
+          var down_date_end = $("#down_date_end").val();
+          var diy_select_code = $("#searchVideo").val();
+          $.post("{:U('Log/serverlogSearch')}",
+            {down_date_start:down_date_start,down_date_end:down_date_end,
+              diy_select_code:diy_select_code},function(data){
+            //将json数据转化为数组
+            var playlog = eval('(' +data+ ')');
+            var newArr = [];
+            for(var i =0;i<playlog.length;i++){
+              if(newArr.indexOf(playlog[i]['device_name']) == -1){
+                  newArr.push(playlog[i]['device_name']);
+              }
+            }
+            $("#deviceCount").html(newArr.length+"台");
+            $("#playTimes").html(playlog.length+"次");
+            $("#mobileTab thead tr").remove();
+            $("#mobileTab thead").append("<tr>"
+                                    +"<th>影片Id</th>"
+                                    +"<th>电影机编号</th>"
+                                    +"<th>电影机别名</th>"
+                                    +"<th>组别名</th>"
+                                    +"<th>影片名称</th>"
+                                    +"<th>开始时间</th>"
+                                    +"<th>结束时间</th>"
+                                    +"<th>影片时长</th>"
+                                    +"<th>操作用户</th>"
+                                    +"<th>播放类型</th>"                           
+                                    +"</tr>");
+            $("#mobileTab tbody tr").remove();
+            $("#showPage").remove();
+            for(var o in playlog){
+                $("#mobileTab tbody").append("<tr>"
+                                    +"<td>"+playlog[o]["id"]+"</td>"
+                                    +"<td>"+playlog[o]["deviceid"]+"</td>"
+                                    +"<td>"+playlog[o]["device_name"]+"</td>"
+                                    +"<td>"+playlog[o]["group_name"]+"</td>"
+                                    +"<td>"+playlog[o]["file_name"]+"</td>"
+                                    +"<td>"+playlog[o]["play_start"]+"</td>"
+                                    +"<td>"+playlog[o]["play_end"]+"</td>"
+                                    +"<td>"+playlog[o]["time"]+"</td>"
+                                    +"<td>"+playlog[o]["username"]+"</td>"
+                                    +"<td>"+playlog[o]["video_type"]+"</td>"                           
+                                    +"</tr>");  
+            }
+          });
+       }
+       function exportExcel(){
+          swal({  
+                  title:"",  
+                  text:"确定要导出此播放日志吗？",  
+                  type:"warning",  
+                  showCancelButton:"true",  
+                  showConfirmButton:"true",  
+                  confirmButtonText:"确定",  
+                  cancelButtonText:"取消",  
+                  animation:"slide-from-top"  
+              }, function() {  
+                  window.location.href="{:U('Log/exportExcel')}";
+        });
+       }
+       function clearSearch(){
+          location.reload();
+       }
+       function deleteSearch(){
+          var down_date_start = $("#down_date_start").val();
+          var down_date_end = $("#down_date_end").val();
+          var diy_select_code = $("#searchVideo").val();
+          swal({  
+                  title:"",  
+                  text:"确定要删除当前搜索结果的数据吗？",  
+                  type:"warning",  
+                  showCancelButton: true, 
+                  closeOnConfirm: false,  
+                  confirmButtonText:"确定",  
+                  cancelButtonText:"取消",  
+                  animation:"slide-from-top"  
+              }, function() {  
+                  $.post("{:U('Log/serverDeleteSearch')}",
+                    {down_date_start:down_date_start,down_date_end:down_date_end,
+                      diy_select_code:diy_select_code},function(data){
+                      swal(data);
+                      search();
+                  });
+          });
+       }
+       $(window).load(queryloglist());
+    </script> 
+</head>
+
+<body>
+  <div class="container main-container">
+    <h3 style="float:left;margin-left:-19px;">服务器播放日志</h3>
+    <div class="row">
+      <br>
+    </div> 
+    <legend style="margin-left:-19px;"></legend>
+
+    <div class="clearfix searchspin" align="center">
+              <dl>
+                <dd>
+                    <form>
+                      <div style="float:left;margin-left:-36px;" >
+                        日期查询
+                  <input type="text" id="down_date_start"  onfocus="WdatePicker()" name="down_date_start" size="10" value="" placeholder="开始日期" /> 至
+                  <input type="text" id="down_date_end" onfocus="WdatePicker()" name="down_date_end" size="10" value="" placeholder="结束日期"/>&nbsp;&nbsp; &nbsp;
+                      &nbsp; 
+                      </div>
+
+                      <div style="float:left"> 
+                        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;关键字 &nbsp;  
+                      </div>
+                        <div style="float:left;margin-left:3px;" >                                              
+                          <input id="searchVideo" name="video_name" size="12" type="text" placeholder="请输入关键词"  value="" > &nbsp;&nbsp;                          
+                        </div>
+                        
+                        <div style="float:left"> 
+                          &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                          &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  
+                        </div>
+
+                        <div style="float:left"><input type="button" class="sblue-btn" onclick="search()" value="搜索" />
+                        &nbsp;&nbsp;<input type="button" class="sblue-btn" onclick="clearSearch()" value="清空" /></div>
+                    </form>
+                </dd>
+            </dl>
+            <div style="float:right;margin-top:-20px;">&nbsp;&nbsp;
+                  <a href="#" id="exportExcel" onclick="exportExcel()" type="button" class="sblue-btn" style="text-decoration:none;">导出Excel</a>
+            </div>
+            <div style="float:right;margin-top:-20px;margin-right:50px;">&nbsp;&nbsp;
+                  <a href="#" id="exportExcel" onclick="deleteSearch()" type="button" class="sblue-btn" style="text-decoration:none;">删除搜索</a>
+            </div>
+        </div>
+    
+      <div class="row" >
+        <div  class="col-lg-10" align="right" class="logo" ><h4><a href="#" id="loginButton"><span></span></a></h4></div> 
+      </div> 
+
+      <div class="row">
+        <br>
+      </div> 
+
+      <div class="row">
+        <p style="font-size: 21px;margin-bottom:-7px;">日志列表</p>
+        <p style="float:right;margin-right:10px;margin-bottom:5px;">播放次数:<b id="playTimes" style="color:red;margin-left:5px"></b></p>
+        <p style="float:right;margin-right:10px;margin-bottom:5px;">设备台数:<b id="deviceCount" style="color:red;margin-left:5px"></b></p>
+        <legend></legend>
+        <table id="mobileTab" class="table table-hover table-striped table-bordered">       
+          <thead>
+            <tr>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortById()">影片Id&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByDevice()">电影机编号&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByDeviceName()">电影机别名&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByDeviceGroup()">组别名&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByVideoName()">影片名称&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByPlayStart()">开始时间&#8593&#8595</a></th>
+              <th><a href="javascript:;" style="text-decoration: none;" onclick="sortByPlayEnd()">结束时间&#8593&#8595</a></th>
+              <th>播放时长</th>
+              <th>操作用户</th>
+              <th>播放类型</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          <!--   动态添加表格项   -->
+          </tbody>
+        </table>
+
+        <!-- paging分页 -->
+  <div class="showPage"  align="center"  id="showPage" style="display:block;margin-top:-20px;">
+    <?php
+      require_once('page.class.php'); //分页类
+      require_once('getTotal.php');
+      $showrow = 10; //一页显示的行数 
+      $curpage = empty($_GET['page']) ? 1 : $_GET['page']; //当前的页,还应该处理非数字的情况 
+      $url = "?page={page}"; //分页地址，如果有检索条件 ="?page={page}&q=".$_GET['q'] 
+      $getTotal = new getTotal();
+      $total = $getTotal->getPlayTotal();
+      if($total > $showrow){
+        $page = new page($total, $showrow, $curpage, $url, 2); 
+        echo $page->myde_write("movie_list");
+      }
+    ?>
+  </div> 
+         <!-- paging-->
+      </div>
+      <br>
+
+      <div class="row" align="center">
+          <br>
+          <br>
+      </div>
+      <div class="row" align="center">
+        <div class="col-lg-4 col-sm-4 col-md-4"></div>     
+        <div class="col-lg-4 col-sm-4 col-md-4"></div>
+      </div>
+
+</body>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/select.js"></script>
+<script type="text/javascript">
+  $(".diy_select_list").click(function (event) {
+      var val = +$(".diy_select_input").val();
+      changefType(val);
+  });
+  function changefType(val)
+  {
+      if (val == 1) {
+          $("#hidden_1").css("display", "block");
+          $("#hidden_2").css("display", "none");
+      }
+      else {
+          $("#hidden_1").css("display", "none");
+          $("#hidden_2").css("display", "block");
+      }
+  } 
+</script>
+</html>

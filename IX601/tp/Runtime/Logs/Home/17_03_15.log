@@ -1,0 +1,809 @@
+[ 2017-03-15T08:53:27+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2017-03-15T08:53:27+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2017-03-15T08:53:27+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2017-03-15T08:53:28+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2017-03-15T08:53:28+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003795s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2017-03-15T08:53:28+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2017-03-15T08:56:19+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2017-03-15T08:56:19+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000102s ]
+
+[ 2017-03-15T09:35:13+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2017-03-15T09:35:13+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2017-03-15T09:35:14+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000100s ]
+
+[ 2017-03-15T09:35:14+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2017-03-15T11:09:06+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.290925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.290995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2017-03-15T11:09:07+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2017-03-15T11:09:07+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2017-03-15T13:02:16+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-03-15T13:02:16+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2017-03-15T13:02:17+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000128s ]
+
+[ 2017-03-15T13:02:17+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2017-03-15T13:02:18+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-03-15T13:02:18+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000100s ]
+
+[ 2017-03-15T13:02:21+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 49 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 68 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2017-03-15T13:02:23+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 49 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 68 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2017-03-15T13:02:28+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 49 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 68 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2017-03-15T13:02:34+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogSearch.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 49 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 68 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2017-03-15T13:02:42+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2017-03-15T13:02:42+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2017-03-15T13:36:20+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2017-03-15T13:36:20+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2017-03-15T13:36:22+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog?page=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2017-03-15T13:36:22+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2017-03-15T13:36:23+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog?page=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2017-03-15T13:36:23+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2017-03-15T13:36:24+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog?page=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2017-03-15T13:36:24+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2017-03-15T13:36:25+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog?page=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-03-15T13:36:25+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2017-03-15T14:00:58+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/operaLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+NOTIC: [8] Undefined index: down_date_start /data/html/micro/remote/tp/getTotal.php 第 4 行.
+NOTIC: [8] Undefined index: down_date_end /data/html/micro/remote/tp/getTotal.php 第 5 行.
+NOTIC: [8] Undefined index: diy_select_txt /data/html/micro/remote/tp/getTotal.php 第 6 行.
+NOTIC: [8] Undefined index: diy_select_code /data/html/micro/remote/tp/getTotal.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/getTotal.php 第 9 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2017-03-15T14:00:58+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2017-03-15T14:00:59+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2017-03-15T14:00:59+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-03-15T14:00:59+08:00 ] 192.168.1.110 /remote/tp/tp.php/home/Log/serverLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2017-03-15T14:00:59+08:00 ] 192.168.1.110 /remote/tp/tp.php/Log/operalogdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 18 行.
+NOTIC: [8] A session had already been started - ignoring session_start() /data/html/micro/remote/tp/Home/Controller/LogController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+

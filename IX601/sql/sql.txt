@@ -1,0 +1,2 @@
+
+                select registered_device.deviceid,alias from registered_device,devicetab where registered_device.deviceid=devicetab.deviceid and devicetab.online=1
